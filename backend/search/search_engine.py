@@ -25,7 +25,7 @@ def find_best_matches(input_name, db_records, threshold=0.6, max_results=10, use
         match = record.copy()
         match["score"] = score
 
-        if score >= threshold:
+        if score >= threshold * 100:
             matches.append(match)
         else:
             fallback_pool.append(match)
